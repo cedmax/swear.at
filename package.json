@@ -1,0 +1,37 @@
+{
+  "name": "swearat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "prettier-eslint-cli": "^4.0.2"
+  },
+  "dependencies": {
+    "gx": "^1.0.0-rc3",
+    "next": "^3.0.0-beta9",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.6",
+    "styletron-client": "^2.5.7",
+    "styletron-connect": "0.0.6",
+    "styletron-react": "^2.5.8",
+    "styletron-server": "^2.5.7"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint **/*.js",
+    "prettify": "prettier-eslint --write \"{,!(node_modules),!(.next)/**/}*.js\""
+  },
+  "author": "",
+  "license": "ISC"
+}

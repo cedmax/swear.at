@@ -1,0 +1,4 @@
+export default {
+  UPDATE_NAME: 'UPDATE_NAME',
+  UPDATE_INSULT: 'UPDATE_INSULT'
+}
