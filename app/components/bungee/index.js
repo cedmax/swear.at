@@ -15,6 +15,7 @@ export default connectStyles(Base, {
     width: '100%'
   },
   bungee: {
+    'line-height': 1.1,
     color: template[0],
     'font-family': 'Bungee, cursive',
     'position': 'relative',
