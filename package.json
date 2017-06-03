@@ -20,6 +20,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-fittext": "git+https://github.com/cedmax/react-fittext.git",
+    "react-rectangle": "^1.3.3",
     "react-redux": "^5.0.5",
     "redux": "^3.6.0",
     "redux-logger": "^3.0.6",
