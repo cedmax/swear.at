@@ -10,7 +10,7 @@ const template = templates[0]
 export default connectStyles(Base, {
   wrapper: {
     top: '50%',
-    transform: 'translateY(-50%)',
+    transform: 'translateY(-55%)',
     position: 'absolute',
     width: '100%'
   },
@@ -37,6 +37,6 @@ export default connectStyles(Base, {
       position: 'absolute',
       'top': '0',
       'width': '100%'
-    },
+    }
   }
 })

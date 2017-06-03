@@ -2,7 +2,6 @@ import {connect} from 'react-redux'
 import Header from 'components/header'
 import Card from 'components/card'
 import Title from 'components/title'
-import CopyButton from 'components/copy-button'
 
 function Main (props) {
   if (props.name) {
@@ -10,7 +9,6 @@ function Main (props) {
       <div>
         <Header />
         <Card />
-        <CopyButton />
       </div>
     )
   } else {

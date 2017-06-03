@@ -1,6 +1,7 @@
 import {connect} from 'react-redux'
 import Bungee from 'components/bungee'
 import Rectangle from 'react-rectangle'
+import CopyButton from 'components/copy-button'
 
 const startWithVowel = (insult) => {
   const match = insult.match(/[aeiou]/i)
@@ -26,6 +27,8 @@ const Card = props => {
      name ? <div className={styles.card}>
       <Rectangle aspectRatio={[2, 2.5]}>
         <Bungee text={text} />
+
+        <div className={styles.button}><CopyButton /></div>
       </Rectangle>
     </div> : <div />
   )
