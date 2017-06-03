@@ -15,9 +15,10 @@ export default class MyDocument extends Document {
         <Head>
           <title>My page</title>
           <link
-            href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Hairline|Bungee+Outline|Bungee+Shade"
+            href="https://fonts.googleapis.com/css?family=Great+Vibes|Bungee|Bungee+Hairline|Bungee+Outline|Bungee+Shade"
             rel="stylesheet"
           />
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
           <style>{`* { margin: 0;padding: 0; box-sizing: border-box}`}</style>
           {this.props.stylesheets.map((sheet, i) =>
             <style
