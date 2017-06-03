@@ -15,19 +15,19 @@ const Card = props => {
   } = props
 
   let article = startWithVowel(insult) ? 'an' : 'a'
-  const text = name ? [
+  const text = [
     `My dear`,
     `${name},`,
     `you're such ${article}`,
     `${insult}`
-  ] : []
+  ]
 
   return (
-     <div className={styles.card}>
+     name ? <div className={styles.card}>
       <Rectangle aspectRatio={[2, 2.5]}>
         <Bungee text={text} />
       </Rectangle>
-    </div>
+    </div> : <div />
   )
 }
 
