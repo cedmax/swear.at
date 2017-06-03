@@ -1,7 +1,7 @@
 import StyletronProvider from 'providers/styletron'
 import Main from 'components/main'
 import ReduxProvider from 'providers/redux'
-import { confirmName, updateName, updateInsult } from 'store/actions'
+import {confirmName, updateName, updateInsult} from 'store/actions'
 import capitalize from 'capitalize'
 import store from 'store'
 
