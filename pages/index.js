@@ -1,21 +1,12 @@
 import StyletronProvider from 'providers/styletron'
-import Form from 'components/form'
-import Card from 'components/card'
 import ReduxProvider from 'providers/redux'
-import Grid from 'gx'
+import Main from 'components/main'
 
-export default function () {
+export default function (props) {
   return (
     <ReduxProvider>
       <StyletronProvider>
-        <div>
-          <Grid col={4}>
-            <Form />
-          </Grid>
-          <Grid col={8}>
-            <Card />
-          </Grid>
-        </div>
+        <Main />
       </StyletronProvider>
     </ReduxProvider>
   )
