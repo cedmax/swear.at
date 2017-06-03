@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "babel-plugin-module-alias": "^1.6.0",
+    "capitalize": "^1.0.0",
     "gx": "^1.0.0-rc3",
     "next": "^3.0.0-beta9",
     "react": "^15.5.4",
