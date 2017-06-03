@@ -1,9 +1,6 @@
-import {createStore, applyMiddleware} from 'redux'
+import store from 'store'
 import {Provider} from 'react-redux'
-import reducer from 'store/reducers'
-import logger from 'redux-logger'
 
-const store = createStore(reducer, applyMiddleware(logger))
 
 export default function ({children}) {
   return (
