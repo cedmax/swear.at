@@ -1,11 +1,10 @@
 import {connect} from 'react-redux'
-import {updateInsult, updateName} from 'store/actions'
+import {updateInsult} from 'store/actions'
+import TitleSmall from 'components/title/small'
 
 class Form extends React.Component {
   constructor (props) {
     super(props)
-    this.handleFieldChange = this.handleFieldChange.bind(this)
-    this.handleNameChange = this.handleNameChange.bind(this)
     this.handleInsultChange = this.handleInsultChange.bind(this)
   }
 
@@ -14,31 +13,24 @@ class Form extends React.Component {
   }
 
   handleInsultChange (e) {
-    this.handleFieldChange(updateInsult, e.target.value)
-  }
+    const insult = e.target.value
+    window.history.replaceState(null, this.props.name, `/${this.props.name.toLowerCase()}/${insult.toLowerCase()}`)
 
-  handleNameChange (e) {
-    this.handleFieldChange(updateName, e.target.value)
+    this.props.dispatch(updateInsult(insult))
   }
 
   render () {
     const {styles} = this.props
     return (
-      <form className={styles.panel}>
-        Dear
-        {' '}<input
-          value={this.props.name}
-          name="name"
-          type="text"
-          onChange={this.handleNameChange}
-        />
-        you're such a
+      <div className={styles.header}>
+        <TitleSmall name={this.props.name} />
         <select
+          className={styles.select}
           value={this.props.insult}
           name="insult"
           onChange={this.handleInsultChange}
         >
-          <option>Please pick your insule</option>
+          <option>Choose</option>
           <option>Wanker</option>
           <option>Dick</option>
           <option>Twat</option>
@@ -47,7 +39,7 @@ class Form extends React.Component {
           <option>Tosser</option>
           <option>Maggot</option>
         </select>
-      </form>
+      </div>
     )
   }
 }
