@@ -1,12 +1,11 @@
-
 import constants from './constants'
-import { combineReducers } from 'redux'
-import { createReducer } from '../helpers/redux';
+import {combineReducers} from 'redux'
+import {createReducer} from 'helpers/redux'
 
 const initialState = {
   name: '',
   insult: ''
-} 
+}
 
 export default combineReducers({
   name: createReducer(constants.UPDATE_NAME, initialState.name),

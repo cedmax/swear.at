@@ -1,4 +1,4 @@
-import connectStyles from 'styletron-connect';
+import connectStyles from 'styletron-connect'
 import BaseCard from './base'
 
 export default connectStyles(BaseCard, {

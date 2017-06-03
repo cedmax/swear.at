@@ -1,12 +1,12 @@
-import Document, { Head, Main, NextScript } from 'next/document'
-import { flush } from '../helpers/styletron'
+import Document, {Head, Main, NextScript} from 'next/document'
+import {flush} from 'helpers/styletron'
 
 export default class MyDocument extends Document {
-  static getInitialProps ({ renderPage }) {
+  static getInitialProps ({renderPage}) {
     const page = renderPage()
     const styletron = flush()
     const stylesheets = styletron ? styletron.getStylesheets() : []
-    return { ...page, stylesheets }
+    return {...page, stylesheets}
   }
 
   render () {
@@ -14,14 +14,14 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>My page</title>
-          {this.props.stylesheets.map((sheet, i) => (
+          {this.props.stylesheets.map((sheet, i) =>
             <style
-              className='_styletron_hydrate_'
-              dangerouslySetInnerHTML={{ __html: sheet.css }}
+              className="_styletron_hydrate_"
+              dangerouslySetInnerHTML={{__html: sheet.css}}
               media={sheet.media || ''}
               key={i}
             />
-          ))}
+          )}
         </Head>
         <body>
           <Main />

@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    ["module-alias", [
+      { "src": "./app/components", "expose": "components" },
+      { "src": "./app/helpers", "expose": "helpers" },
+      { "src": "./app/providers", "expose": "providers" },
+      { "src": "./app/store", "expose": "store" }
+    ]]
+  ]
+}

@@ -1,10 +1,10 @@
-import StyletronProvider from '../providers/styletron';
-import Form from '../components/form'
-import Card from '../components/card'
-import ReduxProvider from '../providers/redux';
+import StyletronProvider from 'app/providers/styletron'
+import Form from 'components/form'
+import Card from 'components/card'
+import ReduxProvider from 'providers/redux'
 import Grid from 'gx'
 
-export default function() {
+export default function () {
   return (
     <ReduxProvider>
       <StyletronProvider>
@@ -18,5 +18,5 @@ export default function() {
         </div>
       </StyletronProvider>
     </ReduxProvider>
-  );
+  )
 }

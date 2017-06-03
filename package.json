@@ -9,10 +9,12 @@
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.0.1",
     "eslint-plugin-standard": "^3.0.1",
     "prettier-eslint-cli": "^4.0.2"
   },
   "dependencies": {
+    "babel-plugin-module-alias": "^1.6.0",
     "gx": "^1.0.0-rc3",
     "next": "^3.0.0-beta9",
     "react": "^15.5.4",
@@ -29,8 +31,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint **/*.js",
-    "prettify": "prettier-eslint --write \"{,!(node_modules),!(.next)/**/}*.js\""
+    "lint": "eslint app/**/*.js pages/*.js",
+    "prettify": "prettier-eslint --write app/**/*.js pages/*.js"
   },
   "author": "",
   "license": "ISC"
