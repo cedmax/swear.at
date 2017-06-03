@@ -14,6 +14,11 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>My page</title>
+          <link
+            href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Hairline|Bungee+Outline|Bungee+Shade"
+            rel="stylesheet"
+          />
+          <style>{`* { margin: 0;padding: 0; box-sizing: border-box}`}</style>
           {this.props.stylesheets.map((sheet, i) =>
             <style
               className="_styletron_hydrate_"

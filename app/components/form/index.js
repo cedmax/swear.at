@@ -1,8 +1,8 @@
 import connectStyles from 'styletron-connect'
-import BaseForm from './base'
+import Base from './base'
 
 const Form = props => {
-  return <BaseForm {...props} />
+  return <Base {...props} />
 }
 
 export default connectStyles(Form, {

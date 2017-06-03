@@ -10,7 +10,6 @@ class Form extends React.Component {
   }
 
   handleFieldChange (action, value) {
-    console.log(arguments)
     this.props.dispatch(action(value))
   }
 
@@ -24,7 +23,6 @@ class Form extends React.Component {
 
   render () {
     const {styles} = this.props
-    console.log(this.props)
     return (
       <form className={styles.panel}>
         Dear

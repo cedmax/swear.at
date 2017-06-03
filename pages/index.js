@@ -1,4 +1,4 @@
-import StyletronProvider from 'app/providers/styletron'
+import StyletronProvider from 'providers/styletron'
 import Form from 'components/form'
 import Card from 'components/card'
 import ReduxProvider from 'providers/redux'
@@ -12,7 +12,7 @@ export default function () {
           <Grid col={4}>
             <Form />
           </Grid>
-          <Grid col={4}>
+          <Grid col={8}>
             <Card />
           </Grid>
         </div>
