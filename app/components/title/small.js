@@ -19,7 +19,7 @@ export default connectStyles(Base, {
   input: {
     border: 0,
     borderBottom: '1px solid #000',
-    fonFamily: '"Great Vibes"',
+    fontFamily: '"Great Vibes"',
     fontSize: '30px',
     height: '45px',
     paddingRight: '1vw',
