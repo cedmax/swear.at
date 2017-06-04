@@ -14,7 +14,8 @@ class Title extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault()
-    window.history.replaceState(null, this.props.name, `/${this.props.name.toLowerCase()}`)
+    const insultPath = this.props.name && this.props.insult ? `/${this.props.insult.toLowerCase()}`:''
+    window.history.replaceState(null, this.props.name, `/${this.props.name.toLowerCase()}${insultPath}`)
     this.props.dispatch(confirmName(this.props.name))
   }
 
@@ -40,5 +41,6 @@ class Title extends React.Component {
 }
 
 export default connect(state => ({
-  name: state.tempName
+  name: state.tempName,
+  insult: state.insult
 }))(Title)
