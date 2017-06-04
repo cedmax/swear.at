@@ -12,7 +12,7 @@ function Main (props) {
       </div>
     )
   } else {
-    return <Title />
+    return typeof window !== 'undefined' ? <Title /> : null
   }
 }
 
