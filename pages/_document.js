@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>My page</title>
+          <title>Swear at...</title>
           <link
             href="https://fonts.googleapis.com/css?family=Great+Vibes|Bungee|Bungee+Hairline|Bungee+Outline|Bungee+Shade"
             rel="stylesheet"
