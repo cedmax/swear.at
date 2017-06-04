@@ -16,7 +16,7 @@ const Card = props => {
     `My dear`,
     `${name},`,
     `you're such ${article}`,
-    `${insult || '     ...     '}`
+    `${insult || ' *@#! '}`
   ]
 
   return name
