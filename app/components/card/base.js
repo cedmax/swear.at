@@ -3,17 +3,13 @@ import Bungee from 'components/bungee'
 import Rectangle from 'react-rectangle'
 import CopyButton from 'components/copy-button'
 
-const startWithVowel = (insult) => {
+const startWithVowel = insult => {
   const match = insult.match(/[aeiou]/i)
   return match && match.index === 0
 }
 
 const Card = props => {
-  const {
-    styles,
-    name,
-    insult
-  } = props
+  const {styles, name, insult} = props
 
   let article = startWithVowel(insult) ? 'an' : 'a'
   const text = [
@@ -23,15 +19,15 @@ const Card = props => {
     `${insult || '     ...     '}`
   ]
 
-  return (
-     name ? <div className={styles.card}>
-      <Rectangle aspectRatio={[2, 2.5]}>
-        <Bungee text={text} />
+  return name
+    ? <div className={styles.card}>
+        <Rectangle aspectRatio={[2, 2.5]}>
+          <Bungee text={text} />
 
-        <div className={styles.button}><CopyButton /></div>
-      </Rectangle>
-    </div> : <div />
-  )
+          <div className={styles.button}><CopyButton /></div>
+        </Rectangle>
+      </div>
+    : <div />
 }
 
 export default connect(state => state)(Card)

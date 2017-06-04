@@ -1,42 +1,40 @@
 import connectStyles from 'styletron-connect'
 import Base from './base'
 
-const templates = [
-  ['#771f15', '#E7E9DB', '#ccc']
-]
+const templates = [['#771f15', '#E7E9DB', '#ccc']]
 
 const template = templates[0]
 
 export default connectStyles(Base, {
   wrapper: {
+    position: 'absolute',
     top: '50%',
     transform: 'translateY(-55%)',
-    position: 'absolute',
     width: '100%'
   },
   bungee: {
-    'line-height': 1.1,
     color: template[0],
-    'font-family': 'Bungee, cursive',
-    'position': 'relative',
+    fontFamily: 'Bungee, cursive',
+    lineHeight: 1.1,
+    position: 'relative',
     ':before': {
       color: template[1],
-      position: 'absolute',
-      display: 'block',
       content: 'attr(data-text)',
-      'font-family': 'Bungee, cursive',
-      'transform': 'translate3d(2px, -2px, 0)',
-      'width': '100%'
+      display: 'block',
+      fontFamily: 'Bungee, cursive',
+      position: 'absolute',
+      transform: 'translate3d(2px, -2px, 0)',
+      width: '100%'
     },
     ':after': {
-      display: 'block',
-      content: 'attr(data-text)',
-      'transform': 'translate3d(2px, -2px, 0)',
-      'font-family': 'Bungee Hairline, cursive',
       color: template[2],
+      content: 'attr(data-text)',
+      display: 'block',
+      fontFamily: 'Bungee Hairline, cursive',
       position: 'absolute',
-      'top': '0',
-      'width': '100%'
+      top: '0',
+      transform: 'translate3d(2px, -2px, 0)',
+      width: '100%'
     }
   }
 })

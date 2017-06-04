@@ -7,26 +7,26 @@ const Header = props => {
 
 export default connectStyles(Header, {
   header: {
-    'margin': 'auto',
-    'max-width': '500px',
-    'width': '90%',
-    'padding': '1% 0',
+    alignItems: 'center',
     display: 'flex',
-    'align-items': 'center',
-    'justify-content': 'space-between'
+    justifyContent: 'space-between',
+    margin: 'auto',
+    maxWidth: '500px',
+    padding: '1% 0',
+    width: '90%'
   },
   select: {
-    'text-align': 'center',
-    'background': '#E7E9DB',
-    'font-size': '15px',
-    'color': '#771F15',
-    'font-family': 'Bungee',
-    'width': '150px',
-    'height': '40px',
-    'padding': '5px 8px',
-    'border': 'none',
-    'box-shadow': 'none',
-    'background-image': 'none',
+    background: '#E7E9DB',
+    backgroundImage: 'none',
+    border: 'none',
+    boxShadow: 'none',
+    color: '#771F15',
+    fontFamily: 'Bungee',
+    fontSize: '15px',
+    height: '40px',
+    padding: '5px 8px',
+    textAlign: 'center',
+    width: '150px',
     '-webkit-appearance': 'none',
     ':focus': {
       outline: 'none'

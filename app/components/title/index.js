@@ -3,15 +3,15 @@ import Base from './base'
 
 export default connectStyles(Base, {
   title: {
-    'font-weight': 'normal',
-    'position': 'absolute',
     display: 'block',
-    'left': '50%',
-    'top': '50%',
-    'line-height': 1,
+    fontFamily: '"Great Vibes"',
+    fontSize: 'calc( 50px + (96 - 50) * ( (100vw - 600px) / (1024 - 600) ))',
+    fontWeight: 'normal',
+    left: '50%',
+    lineHeight: 1,
+    position: 'absolute',
+    top: '50%',
     transform: 'translate3d(-50%, -50%, 0)',
-    'font-family': '"Great Vibes"',
-    'font-size': 'calc( 50px + (96 - 50) * ( (100vw - 600px) / (1024 - 600) ))',
     '@media (max-width: 600px)': {
       fontSize: '50px'
     },
@@ -20,18 +20,18 @@ export default connectStyles(Base, {
     }
   },
   span: {
-    'white-space': 'pre'
+    whiteSpace: 'pre'
   },
   input: {
-    'font-family': '"Great Vibes"',
-    display: 'block',
     border: 0,
-    'border-bottom': '1px solid #000',
+    borderBottom: '1px solid #000',
+    display: 'block',
+    fontFamily: '"Great Vibes"',
+    fontSize: 'calc( 40px + (80 - 40) * ( (100vw - 600px) / (1024 - 600) ))',
+    height: 'calc( 60px + (100 - 60) * ( (100vw - 600px) / (1024 - 600) ))',
+    paddingRight: '1vw',
+    textAlign: 'center',
     width: '50vw',
-    'height': 'calc( 60px + (100 - 60) * ( (100vw - 600px) / (1024 - 600) ))',
-    'text-align': 'center',
-    'padding-right': '1vw',
-    'font-size': 'calc( 40px + (80 - 40) * ( (100vw - 600px) / (1024 - 600) ))',
     '@media (max-width: 600px)': {
       fontSize: '40px'
     },
@@ -42,9 +42,9 @@ export default connectStyles(Base, {
       outline: 0
     }
   },
-  'submit': {
-    width: '1px',
-    'height': '1px',
-    'overflow': 'hidden'
+  submit: {
+    height: '1px',
+    overflow: 'hidden',
+    width: '1px'
   }
 })

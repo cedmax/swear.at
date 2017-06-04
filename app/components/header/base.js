@@ -17,7 +17,13 @@ class Form extends React.Component {
     if (insult === 'Choose') {
       insult = ''
     }
-    window.history.replaceState(null, this.props.name, `/${this.props.name.toLowerCase()}${insult ? '/' + insult.toLowerCase(): ''}`)
+    window.history.replaceState(
+      null,
+      this.props.name,
+      `/${this.props.name.toLowerCase()}${insult
+        ? '/' + insult.toLowerCase()
+        : ''}`
+    )
 
     this.props.dispatch(updateInsult(insult))
   }

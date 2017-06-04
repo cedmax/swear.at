@@ -4,34 +4,34 @@ import Base from './base'
 export default connectStyles(Base, {
   form: {
     display: 'inline-block',
-    'padding': '10px'
+    padding: '10px'
   },
   title: {
-    'font-weight': 'normal',
     display: 'inline-block',
-    'line-height': 1,
-    'font-family': '"Great Vibes"',
-    'font-size': '30px'
+    fontFamily: '"Great Vibes"',
+    fontSize: '30px',
+    fontWeight: 'normal',
+    lineHeight: 1
   },
   span: {
-    'white-space': 'pre'
+    whiteSpace: 'pre'
   },
   input: {
-    'font-family': '"Great Vibes"',
     border: 0,
-    'border-bottom': '1px solid #000',
+    borderBottom: '1px solid #000',
+    fonFamily: '"Great Vibes"',
+    fontSize: '30px',
+    height: '45px',
+    paddingRight: '1vw',
+    textAlign: 'center',
     width: '100px',
-    'height': '45px',
-    'text-align': 'center',
-    'padding-right': '1vw',
-    'font-size': '30px',
     ':focus': {
       outline: 0
     }
   },
-  'submit': {
-    width: '1px',
-    'height': '1px',
-    'overflow': 'hidden'
+  submit: {
+    height: '1px',
+    overflow: 'hidden',
+    width: '1px'
   }
 })

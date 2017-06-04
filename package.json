@@ -37,7 +37,7 @@
     "export": "next build && next export",
     "start": "NODE_ENV=production node server.js",
     "lint": "eslint app/**/*.js pages/*.js",
-    "prettify": "prettier-eslint --write app/**/*.js pages/*.js"
+    "prettify": "prettier-eslint --write \"app/**/*.js\" \"pages/**/*.js\""
   },
   "author": "",
   "license": "ISC"

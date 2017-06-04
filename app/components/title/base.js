@@ -14,8 +14,14 @@ class Title extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault()
-    const insultPath = this.props.name && this.props.insult ? `/${this.props.insult.toLowerCase()}`:''
-    window.history.replaceState(null, this.props.name, `/${this.props.name.toLowerCase()}${insultPath}`)
+    const insultPath = this.props.name && this.props.insult
+      ? `/${this.props.insult.toLowerCase()}`
+      : ''
+    window.history.replaceState(
+      null,
+      this.props.name,
+      `/${this.props.name.toLowerCase()}${insultPath}`
+    )
     this.props.dispatch(confirmName(this.props.name))
   }
 
@@ -25,7 +31,9 @@ class Title extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} className={styles.form}>
         <h1 className={styles.title}>
-          <span className={styles.span}>Swear at</span> <input
+          <span className={styles.span}>Swear at</span>
+          {' '}
+          <input
             className={styles.input}
             value={this.props.name}
             name="name"
