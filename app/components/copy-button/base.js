@@ -1,6 +1,7 @@
 import ClipboardButton from 'react-clipboard.js'
+import {connect} from 'react-redux'
 
-export default class MyView extends React.Component {
+class Button extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -26,9 +27,11 @@ export default class MyView extends React.Component {
   }
 
   render () {
-    const {styles} = this.props
-    return (
-      <div className={styles.actionButtons}>
+    const {styles, insult} = this.props
+
+    let button
+    if (insult) {
+      button = (
         <ClipboardButton
           className={`${this.state.copied
             ? styles.buttonActive
@@ -38,7 +41,23 @@ export default class MyView extends React.Component {
         >
           {this.state.copied ? 'successully copied' : 'Share!'}
         </ClipboardButton>
+      )
+    } else {
+      button = (
+        <button className={`${styles.buttonDisabled} ${styles.button}`}>
+          Share!
+        </button>
+      )
+    }
+
+    return (
+      <div className={styles.actionButtons}>
+        {button}
       </div>
     )
   }
 }
+
+export default connect(state => ({
+  insult: state.insult
+}))(Button)

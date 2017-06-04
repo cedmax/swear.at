@@ -3,7 +3,7 @@ import Base from './base'
 
 export default connectStyles(Base, {
   actionButtons: {
-    margin: '30px auto 20px',
+    margin: 'auto',
     maxWidth: '500px',
     textAlign: 'center',
     width: '90%'
@@ -14,6 +14,7 @@ export default connectStyles(Base, {
     borderRadius: '6px',
     boxShadow: '0 4px #771F15',
     color: '#771F15',
+    cursor: 'pointer',
     fontFamily: 'Bungee',
     fontSize: '15px',
     height: '40px',
@@ -24,8 +25,15 @@ export default connectStyles(Base, {
     textAlign: 'center',
     width: '150px',
     ':active': {
-      boxShadow: '0 0'
+      boxShadow: '0 0',
+      cursor: 'default'
     }
+  },
+  buttonDisabled: {
+    boxShadow: '0 0',
+    color: '#9C6257',
+    cursor: 'default',
+    filter: 'grayscale(100%)'
   },
   buttonActive: {
     boxShadow: '0 0'
