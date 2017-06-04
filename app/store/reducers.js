@@ -22,7 +22,7 @@ if (typeof window !== 'undefined') {
   initialState = {
     tempName: '',
     name: '',
-    insult: '    ...      '
+    insult: ''
   }
 }
 
