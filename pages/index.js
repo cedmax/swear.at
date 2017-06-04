@@ -6,10 +6,12 @@ import capitalize from 'capitalize'
 import store from 'store'
 
 export default class Index extends React.Component {
-  componentWillMount () {
-    if (typeof window!=='undefined') {
+  constructor (props) {
+    super(props)
+
+    if (typeof window !== 'undefined') {
       const pathname = window.location.pathname
-      const paths = pathname.split('/');
+      const paths = pathname.split('/')
       const name = capitalize(paths[1] || '')
       store.dispatch(updateName(name))
       store.dispatch(confirmName(name))
