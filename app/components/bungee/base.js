@@ -6,7 +6,7 @@ export default props => {
   return (
     <div className={styles.wrapper}>
       {text.map((line, i) =>
-        <Fittext key={i} compressor={line.length / 13.5}>
+        <Fittext key={i} compressor={line.length / 13.5} maxFontSize={198}>
           <h2 className={styles.bungee} data-text={line}>{line}</h2>
         </Fittext>
       )}
