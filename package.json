@@ -1,0 +1,67 @@
+{
+  "name": "swear-at",
+  "version": "0.0.1",
+  "description": "https://swear.at",
+  "homepage": "https://swear.at",
+  "author": {
+    "name": "Marco Cedaro",
+    "email": "cedmax@users.noreply.github.com",
+    "url": "https://cedmax.com"
+  },
+  "contributors": [],
+  "files": [
+    "server",
+    "client",
+    "test"
+  ],
+  "main": "server/index.js",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.org/cedmax/swear.at.git"
+  },
+  "license": "ISC",
+  "engines": {
+    "node": "^4.x.x || ^6.x.x || ^7.x.x",
+    "npm": ">= 3.x.x"
+  },
+  "scripts": {
+    "prestart": "npm run build",
+    "dev": "gulp dev",
+    "start": "if test \"$NODE_ENV\" = \"production\"; then npm run prod; else gulp dev; fi",
+    "prod": "echo 'Starting standalone server in PROD mode'; NODE_ENV=production node ./lib/server/",
+    "build": "gulp build",
+    "lint": "eslint src/**/*.js",
+    "prettify": "prettier-eslint --write \"src/**/*.js\""
+  },
+  "dependencies": {
+    "babel-plugin-module-alias": "^1.6.0",
+    "bluebird": "^3.4.6",
+    "capitalize": "^1.0.0",
+    "electrode-archetype-react-app": "^2.0.0",
+    "electrode-confippet": "^1.0.0",
+    "electrode-react-ssr-caching": "^0.1.3",
+    "electrode-react-webapp": "^1.1.0",
+    "electrode-redux-router-engine": "^1.2.2",
+    "koa": "^1.2.4",
+    "koa-router": "^5.4.0",
+    "koa-send": "^3.2.0",
+    "koa-static": "^2.0.0",
+    "lodash": "^4.10.1",
+    "react-clipboard.js": "^1.1.2",
+    "react-fittext": "git+https://github.com/cedmax/react-fittext.git",
+    "react-rectangle": "^1.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "prettier-eslint-cli": "^4.0.2",
+    "electrode-archetype-react-app-dev": "^2.0.0",
+    "gulp": "^3.9.1"
+  }
+}

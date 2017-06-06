@@ -1,0 +1,71 @@
+.service {
+  display: inline-block;
+  flex:0 0 32px;
+  height: 32px;
+  width: 32px;
+  fill: white;
+  padding: 5px;
+}
+
+.service:hover .tooltip {
+  display: block;
+}
+
+.tooltip {
+  position:absolute;
+  white-space:pre;
+  display:none;
+  z-index:50000;
+  border:2px solid #444;
+  background:#555;
+  color:#fff;
+  border-radius:12px 12px 12px 0;
+  box-shadow:2px 2px 5px #111;
+  margin:-65px 0 0;
+  padding:3px 7px;
+}
+
+.facebook {
+  background-color: #3B5998;
+  box-shadow: 3px 3px 0 #263961;
+}
+.kennel {
+  background-color: #a00;
+  box-shadow: 3px 3px 0 rgba(170,0,0, .8);
+}
+.github {
+  background-color: #181717;
+  box-shadow: 3px 3px 0 rgba(0,0,0, .8);
+}
+.instagram {
+  background-color: #E4405F;
+  box-shadow: 3px 3px 0 rgba(189,27,57, .8);
+}
+.lastfm {
+  background-color: #D51007;
+  box-shadow: 3px 3px 0 rgba(139,10,5, .8);
+}
+.linkedin {
+  background-color: #0077B5;
+  box-shadow: 3px 3px 0 rgba(0,69,105, .8);
+}
+.speakerdeck {
+  background-color: #339966;
+  box-shadow: 3px 3px 0 rgba(32,96,64, .8);
+}
+.tumblr {
+  background-color: #36465D;
+  box-shadow: 3px 3px 0 rgba(26,34,45, .8);
+}
+.twitter {
+  background-color: #1DA1F2;
+  box-shadow: 3px 3px 0 rgba(11,118,184, .8);
+}
+.dsgn {
+  background-color: #CC171E;
+  box-shadow: 3px 3px 0 rgba(135,15,20, .8);
+}
+
+.dsgn svg {
+  margin: -4px;
+}

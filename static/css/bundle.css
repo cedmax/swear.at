@@ -1,0 +1,95 @@
+.index__header___37-I0 {
+  height: 100vh;
+}
+.index__menu___2q0RZ {
+  position: absolute;
+  background: rgba(0,0,0,.6);
+  bottom: 0px;
+  z-index: 1;
+  width: 90%;
+  max-width: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.index__menu___2q0RZ ul {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding:5px 5px 8px;
+}
+
+.index__menu___2q0RZ li {
+  height: 30px;
+}
+.item__service___2vTMT {
+  display: inline-block;
+  flex:0 0 32px;
+  height: 32px;
+  width: 32px;
+  fill: white;
+  padding: 5px;
+}
+
+.item__service___2vTMT:hover .item__tooltip___3WTi8 {
+  display: block;
+}
+
+.item__tooltip___3WTi8 {
+  position:absolute;
+  white-space:pre;
+  display:none;
+  z-index:50000;
+  border:2px solid #444;
+  background:#555;
+  color:#fff;
+  border-radius:12px 12px 12px 0;
+  box-shadow:2px 2px 5px #111;
+  margin:-65px 0 0;
+  padding:3px 7px;
+}
+
+.item__facebook___3ummq {
+  background-color: #3B5998;
+  box-shadow: 3px 3px 0 #263961;
+}
+.item__kennel___1N_R6 {
+  background-color: #a00;
+  box-shadow: 3px 3px 0 rgba(170,0,0, .8);
+}
+.item__github___cfCDd {
+  background-color: #181717;
+  box-shadow: 3px 3px 0 rgba(0,0,0, .8);
+}
+.item__instagram___Blufd {
+  background-color: #E4405F;
+  box-shadow: 3px 3px 0 rgba(189,27,57, .8);
+}
+.item__lastfm___1036n {
+  background-color: #D51007;
+  box-shadow: 3px 3px 0 rgba(139,10,5, .8);
+}
+.item__linkedin___2P5ht {
+  background-color: #0077B5;
+  box-shadow: 3px 3px 0 rgba(0,69,105, .8);
+}
+.item__speakerdeck___vYaGY {
+  background-color: #339966;
+  box-shadow: 3px 3px 0 rgba(32,96,64, .8);
+}
+.item__tumblr___3CrTQ {
+  background-color: #36465D;
+  box-shadow: 3px 3px 0 rgba(26,34,45, .8);
+}
+.item__twitter___3sXzv {
+  background-color: #1DA1F2;
+  box-shadow: 3px 3px 0 rgba(11,118,184, .8);
+}
+.item__dsgn___2apLW {
+  background-color: #CC171E;
+  box-shadow: 3px 3px 0 rgba(135,15,20, .8);
+}
+
+.item__dsgn___2apLW svg {
+  margin: -4px;
+}

@@ -1,0 +1,34 @@
+.wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+  width: 100%
+}
+
+.bungee {
+  color: #771f15;
+  font-family: Bungee, cursive;
+  line-height: 1.1;
+  position: relative;
+}
+
+.bungee:before {
+  color: #E7E9DB;
+  content: attr(data-text);
+  display: block;
+  font-family: Bungee, cursive;
+  position: absolute;
+  transform: translate3d(2px, -2px, 0);
+  width: 100%
+}
+
+.bungee:after {
+  color: #ccc;
+  content: attr(data-text);
+  display: block;
+  font-family: Bungee Hairline, cursive;
+  position: absolute;
+  top: 0;
+  transform: translate3d(2px, -2px, 0);
+  width: 100%
+}

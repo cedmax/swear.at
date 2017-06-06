@@ -1,0 +1,77 @@
+.title {
+  display:block;
+  font-family:"Great Vibes";
+  font-size:calc( 50px + (96 - 50) * ( (100vw - 600px) / (1024 - 600) ));
+  font-weight:normal;
+  left:50%;
+  line-height:1;
+  position:absolute;
+  top:50%;
+  transform:translate3d(-50%, -50%, 0);
+}
+
+.small .title {
+  display: inline-block;
+  font-size: 30px;
+  left: 0;
+  position: relative;
+  top:0;
+  transform: none;
+}
+
+.input {
+  border:0px;
+  border-bottom:1px solid #000;
+  display:block;
+  font-family:"Great Vibes";
+  font-size:calc( 40px + (80 - 40) * ( (100vw - 600px) / (1024 - 600) ));
+  height:calc( 60px + (100 - 60) * ( (100vw - 600px) / (1024 - 600) ));
+  padding-right:1vw;
+  text-align:center;
+  width:50vw;
+}
+
+.small .input {
+  display: inline-block;
+  font-size: 30px!important;
+  height: 45px!important;
+  width: 100px;
+}
+
+.input:focus {
+  outline: 0
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 50px
+  }
+  .input {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 96px
+  }
+  .input {
+    font-size: 80px
+  }
+}
+
+.span {
+  white-space: pre
+}
+
+.submit {
+  height: 1px;
+  overflow: hidden;
+  width: 1px
+}
+
+.form.small {
+  display: inline-block;
+  padding: 10px
+}
+

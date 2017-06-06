@@ -1,0 +1,26 @@
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 500px;
+  padding: 1% 0;
+  width: 90%
+}
+.select {
+  background: #E7E9DB;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  color: #771F15;
+  font-family: Bungee;
+  font-size: 15px;
+  height: 40px;
+  padding: 5px 8px;
+  text-align: center;
+  width: 150px;
+  -webkit-appearance: none
+}
+.select:focus {
+  outline: none
+}
