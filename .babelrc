@@ -1,11 +1,7 @@
 {
   "plugins": [
     [
-      "module-alias", [
-        { "src": "./pages/helpers", "expose": "helpers" },
-        { "src": "./pages/components", "expose": "components" },
-        { "src": "./pages/data", "expose": "data" }
-      ]
+      "module-alias", []
     ]
   ]
 }

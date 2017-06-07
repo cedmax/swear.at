@@ -4,6 +4,7 @@ import {updateInsult} from '../../store/actions'
 import Title from '../title'
 import classNames from './style.css'
 import {browserHistory} from 'react-router'
+import insults from '../../constants/insults'
 
 class Form extends React.Component {
   constructor (props) {
@@ -40,13 +41,7 @@ class Form extends React.Component {
           onChange={this.handleInsultChange}
         >
           <option>Choose</option>
-          <option>Wanker</option>
-          <option>Dick</option>
-          <option>Twat</option>
-          <option>Prick</option>
-          <option>Arsehole</option>
-          <option>Tosser</option>
-          <option>Maggot</option>
+          {insults.map((insult)=><option>{insult}</option>)}
         </select>
       </div>
     )
