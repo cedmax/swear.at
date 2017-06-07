@@ -7,9 +7,9 @@ import {render} from 'react-dom'
 import {routes} from './routes'
 import {Router, browserHistory} from 'react-router'
 import {Provider} from 'react-redux'
-/*  */
-import store from './store'
-/*  */
+import {createStore} from 'redux'
+import reducer from './store/reducers'
+
 import './styles/base.css'
 
 // Add the client app start up code to a function as window.webappStart.
@@ -17,6 +17,9 @@ import './styles/base.css'
 // DOM is created.
 /**/
 window.webappStart = () => {
+  const initialState = window.__PRELOADED_STATE__
+  const store = createStore(reducer, initialState)
+
   render(
     <Provider store={store}>
       <Router history={browserHistory}>{routes}</Router>

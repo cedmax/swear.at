@@ -5,7 +5,7 @@
 import ReduxRouterEngine from 'electrode-redux-router-engine'
 import {routes} from '../../client/routes'
 import {createStore} from 'redux'
-import rootReducer from '../../client/reducers'
+import rootReducer from '../../client/store/reducers'
 import capitalize from 'capitalize'
 
 const Promise = require('bluebird')
