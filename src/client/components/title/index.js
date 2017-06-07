@@ -12,7 +12,7 @@ class Title extends React.Component {
   }
 
   handleNameChange (e) {
-    this.props.dispatch(updateName(e.target.value))
+    this.props.dispatch(updateName(e.target.value.trim()))
   }
 
   handleSubmit (e) {

@@ -13,8 +13,8 @@ const Promise = require('bluebird')
 function createReduxStore(req, match) { // eslint-disable-line
   const pathname = req.url
   const paths = pathname.split('/')
-  const name = capitalize(paths[1] || '')
-  const insult = capitalize(paths[2] || '')
+  const name = capitalize(decodeURI(paths[1] || ''))
+  const insult = capitalize(decodeURI(paths[2] || ''))
 
   const store = createStore(rootReducer, {
     tempName: name,
