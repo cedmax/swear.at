@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 
 const defaultListenPort = 3000
 

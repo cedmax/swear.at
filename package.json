@@ -38,6 +38,7 @@
     "babel-plugin-module-alias": "^1.6.0",
     "bluebird": "^3.4.6",
     "capitalize": "^1.0.0",
+    "dotenv": "^4.0.0",
     "electrode-archetype-react-app": "^2.0.0",
     "electrode-confippet": "^1.0.0",
     "electrode-react-ssr-caching": "^0.1.3",
