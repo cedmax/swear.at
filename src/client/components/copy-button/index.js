@@ -25,13 +25,15 @@ export default class Button extends React.Component {
   }
 
   getText () {
-    return document.location.host + '/share/' + obfuscator.encode(window.location.pathname)
+    return `${document.location.host}/share/${obfuscator.encode(
+      window.location.pathname
+    )}`
   }
 
   render () {
     return (
       <div className={classNames.actionButtons}>
-       <ClipboardButton
+        <ClipboardButton
           className={`${this.state.copied
             ? classNames.buttonActive
             : ''} ${classNames.button}`}
