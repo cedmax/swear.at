@@ -1,9 +1,9 @@
 import React from 'react'
 import ClipboardButton from 'react-clipboard.js'
-import {connect} from 'react-redux'
 import classNames from './style.css'
+import obfuscator from '../../helpers/obfuscator'
 
-class Button extends React.Component {
+export default class Button extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -25,16 +25,13 @@ class Button extends React.Component {
   }
 
   getText () {
-    return window.location.href
+    return document.location.host + '/share/' + obfuscator.encode(window.location.pathname)
   }
 
   render () {
-    const {insult} = this.props
-
-    let button
-    if (insult) {
-      button = (
-        <ClipboardButton
+    return (
+      <div className={classNames.actionButtons}>
+       <ClipboardButton
           className={`${this.state.copied
             ? classNames.buttonActive
             : ''} ${classNames.button}`}
@@ -43,23 +40,7 @@ class Button extends React.Component {
         >
           {this.state.copied ? 'successully copied' : 'Share!'}
         </ClipboardButton>
-      )
-    } else {
-      button = (
-        <button className={`${classNames.buttonDisabled} ${classNames.button}`}>
-          Share!
-        </button>
-      )
-    }
-
-    return (
-      <div className={classNames.actionButtons}>
-        {button}
       </div>
     )
   }
 }
-
-export default connect(state => ({
-  insult: state.insult
-}))(Button)

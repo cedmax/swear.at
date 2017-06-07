@@ -51,7 +51,8 @@
     "lodash": "^4.10.1",
     "react-clipboard.js": "^1.1.2",
     "react-fittext": "git+https://github.com/cedmax/react-fittext.git",
-    "react-rectangle": "^1.3.3"
+    "react-rectangle": "^1.3.3",
+    "string-obfuscator": "0.0.2"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
