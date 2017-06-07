@@ -6,17 +6,21 @@ import ReduxRouterEngine from 'electrode-redux-router-engine'
 import {routes} from '../../client/routes'
 import {createStore} from 'redux'
 import rootReducer from '../../client/reducers'
+import capitalize from 'capitalize'
 
 const Promise = require('bluebird')
 
 function createReduxStore(req, match) { // eslint-disable-line
-  const initialState = {
-    tempName: '',
-    name: '',
-    insult: ''
-  }
+  const pathname = req.url
+  const paths = pathname.split('/')
+  const name = capitalize(paths[1] || '')
+  const insult = capitalize(paths[2] || '')
 
-  const store = createStore(rootReducer, initialState)
+  const store = createStore(rootReducer, {
+    tempName: name,
+    name,
+    insult
+  })
   return Promise.resolve(store)
 }
 
