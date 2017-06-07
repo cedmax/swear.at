@@ -5,17 +5,17 @@ import classNames from './style.css'
 import {browserHistory} from 'react-router'
 
 class Title extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleNameChange = this.handleNameChange.bind(this)
   }
 
-  handleNameChange(e) {
+  handleNameChange (e) {
     this.props.dispatch(updateName(e.target.value))
   }
 
-  handleSubmit(e) {
+  handleSubmit (e) {
     e.preventDefault()
     const insultPath = this.props.name && this.props.insult
       ? `/${this.props.insult.toLowerCase()}`
@@ -27,8 +27,10 @@ class Title extends React.Component {
     }
   }
 
-  render() {
-    const formClassName = `${classNames.form} ${this.props.small ? classNames.small : ''}`
+  render () {
+    const formClassName = `${classNames.form} ${this.props.small
+      ? classNames.small
+      : ''}`
     return (
       <form onSubmit={this.handleSubmit} className={formClassName}>
         <h1 className={classNames.title}>

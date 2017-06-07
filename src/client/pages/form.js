@@ -3,7 +3,7 @@ import Header from '../components/header'
 import Card from '../components/card'
 
 export default class Form extends React.Component {
-  render() {
+  render () {
     return (
       <div>
         <Header />

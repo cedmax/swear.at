@@ -14,7 +14,12 @@ const Card = props => {
   const {name, insult} = props
 
   const article = startWithVowel(insult) ? 'an' : 'a'
-  const text = ['My dear', `${name},`, `you're such ${article}`, `${insult || ' *@#! '}`]
+  const text = [
+    'My dear',
+    `${name},`,
+    `you're such ${article}`,
+    `${insult || ' *@#! '}`
+  ]
 
   return name
     ? <div className={classNames.card}>

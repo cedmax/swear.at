@@ -6,28 +6,30 @@ import classNames from './style.css'
 import {browserHistory} from 'react-router'
 
 class Form extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.handleInsultChange = this.handleInsultChange.bind(this)
   }
 
-  handleFieldChange(action, value) {
+  handleFieldChange (action, value) {
     this.props.dispatch(action(value))
   }
 
-  handleInsultChange(e) {
+  handleInsultChange (e) {
     let insult = e.target.value
     if (insult === 'Choose') {
       insult = ''
     }
     browserHistory.replace(
-      `/${this.props.name.toLowerCase()}${insult ? `/${ insult.toLowerCase()}` : ''}`
+      `/${this.props.name.toLowerCase()}${insult
+        ? `/${insult.toLowerCase()}`
+        : ''}`
     )
 
     this.props.dispatch(updateInsult(insult))
   }
 
-  render() {
+  render () {
     return (
       <div className={classNames.header}>
         <Title small name={this.props.name} />

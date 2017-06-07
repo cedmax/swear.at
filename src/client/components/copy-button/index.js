@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import classNames from './style.css'
 
 class Button extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       copied: false
@@ -12,7 +12,7 @@ class Button extends React.Component {
     this.onSuccess = this.onSuccess.bind(this)
   }
 
-  onSuccess() {
+  onSuccess () {
     this.setState({
       copied: true
     })
@@ -24,18 +24,20 @@ class Button extends React.Component {
     }, 3000)
   }
 
-  getText() {
+  getText () {
     return window.location.href
   }
 
-  render() {
+  render () {
     const {insult} = this.props
 
     let button
     if (insult) {
       button = (
         <ClipboardButton
-          className={`${this.state.copied ? classNames.buttonActive : ''} ${classNames.button}`}
+          className={`${this.state.copied
+            ? classNames.buttonActive
+            : ''} ${classNames.button}`}
           option-text={this.getText}
           onSuccess={this.onSuccess}
         >
