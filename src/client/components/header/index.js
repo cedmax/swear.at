@@ -41,7 +41,7 @@ class Form extends React.Component {
           onChange={this.handleInsultChange}
         >
           <option>Choose</option>
-          {insults.map((insult)=><option>{insult}</option>)}
+          {insults.map(insult => <option key={insult}>{insult}</option>)}
         </select>
       </div>
     )
