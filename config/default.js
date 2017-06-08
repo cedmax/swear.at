@@ -24,6 +24,14 @@ module.exports = {
       'options': {
         'pageTitle': 'Swear at...',
         'paths': {
+          '/share/*': {
+            'content': () => {
+              return Promise.resolve({
+                status: 200,
+                html: '<div style="padding:10px;">Redirecting...</div>'
+              })
+            }
+          },
           '*': {
             'content': {
               'module': './{{env.APP_SRC_DIR}}/server/views/index-view'
