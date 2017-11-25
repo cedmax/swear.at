@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Bungee|Bungee+Hairline|Bungee+Outline|Bungee+Shade');
+
+
+html, body {
+  height: 100%;
+}
+body {
+  position: relative;
+}
+
+* { margin: 0;padding: 0; box-sizing: border-box}
