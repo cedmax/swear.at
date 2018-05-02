@@ -13,7 +13,7 @@ export default class Form extends React.Component {
         Swear.at is the happy home of:   
       {
         paths.map(path => (
-          <a href={`/${path}`}>{pathObj[path]}</a>
+          <a key={path} href={`/${path}`}>{pathObj[path]}</a>
         ))
       }</footer>
     )
