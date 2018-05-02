@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import {updateName, confirmName} from '../../store/actions'
+import {updateName} from '../../store/actions'
 import {bindActionCreators} from 'redux'
 import Title from './ui.js'
 

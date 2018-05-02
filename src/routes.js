@@ -5,7 +5,6 @@ import Form from './pages/form'
 import obfuscator from './helpers/obfuscator'
 import store from './store';
 import {updateName, updateInsult, confirmName} from './store/actions';
-import insults from './constants/insults';
 
 export const routes = (paths) => (
   <Route path="/">
