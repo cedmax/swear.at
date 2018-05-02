@@ -4,6 +4,6 @@ import {bindActionCreators} from 'redux'
 import Title from './ui.js'
 
 const mapStateToProps = ({tempName, insult}) => ({tempName, insult})
-const mapDispatchToProps = (dispatch) => bindActionCreators({ updateName, confirmName }, dispatch)
+const mapDispatchToProps = (dispatch) => bindActionCreators({ updateName }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Title)

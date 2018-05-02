@@ -3,6 +3,9 @@ import {Route, IndexRoute} from 'react-router'
 import Index from './pages/index'
 import Form from './pages/form'
 import obfuscator from './helpers/obfuscator'
+import store from './store';
+import {updateName, updateInsult, confirmName} from './store/actions';
+import insults from './constants/insults';
 
 export const routes = (paths) => (
   <Route path="/">
@@ -12,11 +15,14 @@ export const routes = (paths) => (
       }
     }}/>
     
-    <Route path=":name" onEnter={(state, replace, callback) => {
+    <Route path=":name" onEnter={(state) => {
       if (paths[state.params.name]){
         window.location.href = `/${state.params.name}`
       } else {
-        callback()
+        store.dispatch(updateName(state.params.name))
+        store.dispatch(confirmName(state.params.name))
+        console.log(state.params.insult)
+        store.dispatch(updateInsult(state.params.insult || ''))
       }
     }}>
       <Route path=":insult" component={Form} />

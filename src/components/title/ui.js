@@ -21,7 +21,6 @@ export default class Title extends React.Component {
 
     if (this.props.tempName) {
       browserHistory.replace(`/${this.props.tempName.toLowerCase()}${insultPath}`)
-      this.props.confirmName(this.props.tempName)
     }
   }
 

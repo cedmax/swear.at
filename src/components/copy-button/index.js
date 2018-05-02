@@ -25,7 +25,7 @@ export default class Button extends React.Component {
   }
 
   getText () {
-    return `https://${document.location.host}/share/${obfuscator.encode(
+    return `${document.location.protocol}//${document.location.host}/share/${obfuscator.encode(
       window.location.pathname
     )}`
   }
