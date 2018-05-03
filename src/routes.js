@@ -12,9 +12,7 @@ export const routes = paths => (
       path="share/:id"
       component={Form}
       onEnter={(state, replace) => {
-        if (typeof window !== 'undefined') {
-          replace(obfuscator.decode(state.params.id))
-        }
+        replace(obfuscator.decode(state.params.id))
       }}
     />
 
@@ -22,9 +20,7 @@ export const routes = paths => (
       path=":name"
       onEnter={state => {
         if (paths[state.params.name]) {
-          if (typeof window !== 'undefined') {
-            window.location.href = `/${state.params.name}`
-          }
+          window.location.href = `/${state.params.name}`
         } else {
           store.dispatch(updateName(state.params.name))
           store.dispatch(confirmName(state.params.name))
