@@ -40,7 +40,7 @@ export default class Button extends React.Component {
           option-text={this.getText}
           onSuccess={this.onSuccess}
         >
-          {this.state.copied ? 'successully copied' : 'Share obfuscated URL'}
+          {this.state.copied ? 'successully copied' : 'Obfuscate URL'}
         </ClipboardButton>
       </div>
     )
