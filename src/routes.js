@@ -1,10 +1,10 @@
-import React from "react";
-import { Route, IndexRoute } from "react-router";
-import Index from "./pages/index";
-import Form from "./pages/form";
-import obfuscator from "./helpers/obfuscator";
-import store from "./store";
-import { updateName, updateInsult, confirmName } from "./store/actions";
+import React from 'react'
+import { Route, IndexRoute } from 'react-router'
+import Index from './pages/index'
+import Form from './pages/form'
+import obfuscator from './helpers/obfuscator'
+import store from './store'
+import { updateName, updateInsult, confirmName } from './store/actions'
 
 export const routes = paths => (
   <Route path="/">
@@ -12,23 +12,23 @@ export const routes = paths => (
       path="share/:id"
       component={Form}
       onEnter={(state, replace) => {
-        if (typeof window !== "undefined") {
-          replace(obfuscator.decode(state.params.id));
+        if (typeof window !== 'undefined') {
+          replace(obfuscator.decode(state.params.id))
         }
       }}
     />
 
     <Route
       path=":name"
-      onEnter={(state) => {
+      onEnter={state => {
         if (paths[state.params.name]) {
-          if (typeof window !== "undefined") {
-            window.location.href = `/${state.params.name}`;
+          if (typeof window !== 'undefined') {
+            window.location.href = `/${state.params.name}`
           }
         } else {
-          store.dispatch(updateName(state.params.name));
-          store.dispatch(confirmName(state.params.name));
-          store.dispatch(updateInsult(state.params.insult || ""));
+          store.dispatch(updateName(state.params.name))
+          store.dispatch(confirmName(state.params.name))
+          store.dispatch(updateInsult(state.params.insult || ''))
         }
       }}
     >
@@ -37,4 +37,4 @@ export const routes = paths => (
     </Route>
     <IndexRoute component={Index} />
   </Route>
-);
+)

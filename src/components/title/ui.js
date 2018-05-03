@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from './style.module.css'
-import {browserHistory} from 'react-router'
+import { browserHistory } from 'react-router'
 
 export default class Title extends React.Component {
   constructor (props) {
@@ -15,24 +15,26 @@ export default class Title extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault()
-    const insultPath = this.props.tempName && this.props.insult
-      ? `/${this.props.insult.toLowerCase()}`
-      : ''
+    const insultPath =
+      this.props.tempName && this.props.insult
+        ? `/${this.props.insult.toLowerCase()}`
+        : ''
 
     if (this.props.tempName) {
-      browserHistory.replace(`/${this.props.tempName.toLowerCase()}${insultPath}`)
+      browserHistory.replace(
+        `/${this.props.tempName.toLowerCase()}${insultPath}`
+      )
     }
   }
 
   render () {
-    const formClassName = `${classNames.form} ${this.props.small
-      ? classNames.small
-      : ''}`
+    const formClassName = `${classNames.form} ${
+      this.props.small ? classNames.small : ''
+    }`
     return (
       <form onSubmit={this.handleSubmit} className={formClassName}>
         <h1 className={classNames.title}>
-          <span className={classNames.span}>Swear at</span>
-          {' '}
+          <span className={classNames.span}>Swear at</span>{' '}
           <input
             className={classNames.input}
             value={this.props.tempName}
@@ -42,7 +44,9 @@ export default class Title extends React.Component {
             onChange={this.handleNameChange}
           />
         </h1>
-        <div className={classNames.submit}><input type="submit" /></div>
+        <div className={classNames.submit}>
+          <input type="submit" />
+        </div>
       </form>
     )
   }

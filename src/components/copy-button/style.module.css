@@ -2,39 +2,39 @@
   margin: auto;
   max-width: 500px;
   text-align: center;
-  width: 90%
+  width: 90%;
 }
 
 .button {
-  background: #E7E9DB;
+  background: #e7e9db;
   border: none;
   border-radius: 6px;
-  box-shadow: 0 4px #771F15;
-  color: #771F15;
+  box-shadow: 0 4px #771f15;
+  color: #771f15;
   cursor: pointer;
-  font-family: Bungee;
+  font-family: Bungee, sans-serif;
   font-size: 15px;
   height: 40px;
   line-height: 1;
-  margin: 0 10px;;
+  margin: 0 10px;
   outline: none;
   padding: 5px 8px;
   text-align: center;
-  width: 150px,
+  width: 150px;
 }
 
 .button:active {
   box-shadow: 0 0;
-  cursor: default
+  cursor: default;
 }
 
 .buttonDisabled {
   box-shadow: 0 0;
-  color: #9C6257;
+  color: #9c6257;
   cursor: default;
-  filter: grayscale(100%)
+  filter: grayscale(100%);
 }
 
 .buttonActive {
-  box-shadow: 0 0
+  box-shadow: 0 0;
 }

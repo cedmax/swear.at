@@ -13,17 +13,17 @@
   white-space: pre;
 }
 
-.bungee:before {
-  color: #E7E9DB;
+.bungee::before {
+  color: #e7e9db;
   content: attr(data-text);
   display: block;
   font-family: Bungee, cursive;
   position: absolute;
   transform: translate3d(2px, -2px, 0);
-  width: 100%
+  width: 100%;
 }
 
-.bungee:after {
+.bungee::after {
   color: #ccc;
   content: attr(data-text);
   display: block;
@@ -31,5 +31,5 @@
   position: absolute;
   top: 0;
   transform: translate3d(2px, -2px, 0);
-  width: 100%
+  width: 100%;
 }

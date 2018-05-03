@@ -1,7 +1,7 @@
 import React from 'react'
 import Title from '../title'
 import classNames from './style.module.css'
-import {browserHistory} from 'react-router'
+import { browserHistory } from 'react-router'
 import insults from '../../constants/insults'
 
 export default class Form extends React.Component {
@@ -16,9 +16,9 @@ export default class Form extends React.Component {
       insult = ''
     }
     browserHistory.replace(
-      `/${this.props.name.toLowerCase()}${insult
-        ? `/${insult.toLowerCase()}`
-        : ''}`
+      `/${this.props.name.toLowerCase()}${
+        insult ? `/${insult.toLowerCase()}` : ''
+      }`
     )
 
     this.props.updateInsult(insult)
@@ -35,7 +35,11 @@ export default class Form extends React.Component {
           onChange={this.handleInsultChange}
         >
           <option>Choose</option>
-          {insults.map(insult => <option value={insult.toLowerCase()} key={insult}>{insult}</option>)}
+          {insults.map(insult => (
+            <option value={insult.toLowerCase()} key={insult}>
+              {insult}
+            </option>
+          ))}
         </select>
       </div>
     )

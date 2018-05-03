@@ -1,6 +1,6 @@
 import constants from './constants'
-import {combineReducers} from 'redux'
-import {createReducer} from '../helpers/redux'
+import { combineReducers } from 'redux'
+import { createReducer } from '../helpers/redux'
 import defaultState from './default-state'
 
 export default combineReducers({

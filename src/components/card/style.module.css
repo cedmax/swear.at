@@ -1,6 +1,6 @@
 .card {
-  background: #DC4227;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background: #dc4227;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   margin: auto;
   max-width: 90%;
   padding: 0 0 3rem;
@@ -10,12 +10,12 @@
 }
 
 .card:hover {
-  box-shadow: 0 16px 24px 0 rgba(0,0,0,0.2)
+  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.2);
 }
 
 .button {
   bottom: 0;
   left: 50%;
   position: absolute;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 }

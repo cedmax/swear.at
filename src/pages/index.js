@@ -1,12 +1,12 @@
-import React, { Fragment } from "react";
-import Title from "../components/title";
-import Footer from "../components/footer";
+import React, { Fragment } from 'react'
+import Title from '../components/title'
+import Footer from '../components/footer'
 
-export default function() {
+export default function () {
   return (
     <Fragment>
       <Title />
       <Footer />
     </Fragment>
-  );
+  )
 }

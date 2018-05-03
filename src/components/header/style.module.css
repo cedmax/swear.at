@@ -5,22 +5,24 @@
   margin: auto;
   max-width: 500px;
   padding: 1% 0;
-  width: 90%
+  width: 90%;
 }
+
 .select {
-  background: #E7E9DB;
+  background: #e7e9db;
   background-image: none;
   border: none;
   box-shadow: none;
-  color: #771F15;
-  font-family: Bungee;
+  color: #771f15;
+  font-family: Bungee, sans-serif;
   font-size: 15px;
   height: 40px;
   padding: 5px 8px;
   text-align: center;
   width: 150px;
-  -webkit-appearance: none
+  -webkit-appearance: none;
 }
+
 .select:focus {
-  outline: none
+  outline: none;
 }
