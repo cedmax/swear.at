@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from './style.module.css'
 import { browserHistory } from 'react-router'
+import capitalize from 'capitalize'
 
 export default class Title extends React.Component {
   constructor (props) {
@@ -37,7 +38,7 @@ export default class Title extends React.Component {
           <span className={classNames.span}>Swear at</span>{' '}
           <input
             className={classNames.input}
-            value={this.props.tempName}
+            value={capitalize(this.props.tempName)}
             name="name"
             type="text"
             autoComplete="off"

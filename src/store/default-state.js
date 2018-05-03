@@ -1,4 +1,3 @@
-import capitalize from 'capitalize'
 import paths from '../constants/custom-paths'
 
 let defaultState = {
@@ -11,8 +10,8 @@ let defaultState = {
 if (typeof window !== 'undefined') {
   const pathname = window.location.pathname
   const paths = pathname.split('/')
-  const name = capitalize(paths[1] || '')
-  const insult = capitalize(paths[2] || '')
+  const name = paths[1] || ''
+  const insult = paths[2] || ''
 
   defaultState = {
     ...defaultState,
